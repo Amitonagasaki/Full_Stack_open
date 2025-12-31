@@ -7,9 +7,15 @@ const Button =({onClick,text})=> <button onClick={onClick}>{text}</button>
 
 const StatisticLine =({text,value})=>
 (
-  <div>
-    <li>{text} {value}</li>
-  </div>
+  <table>
+  <thead> 
+    <tr>
+    <th>{text}</th>
+    <th>{value}</th>
+   </tr>
+   </thead>
+  
+  </table>
 )
 
 
@@ -22,13 +28,14 @@ if(total>=1){
 return(
   <div>
  <p>statistics</p>
-       <StatisticLine text="good" value={good}/>
+
+      <StatisticLine text="good" value={good}/>
       <StatisticLine text="neutral" value={neutral}/>
-       <StatisticLine text ="bad" value={bad}/>
-       <li>all {total}</li>
-       <li>average {average}</li>
-       <li>postive {postivePercentage} %</li>
-  </div>
+      <StatisticLine text ="bad" value={bad}/>
+      <StatisticLine text ="all" value={total}/>
+      <StatisticLine text ="average" value={average}/>
+      <StatisticLine text ="Postive" value={`${postivePercentage} %`}/>
+</div>
 
 )
 }
