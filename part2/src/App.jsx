@@ -5,7 +5,7 @@ const Course=({course})=>{
   <div>
     <Header courseName={course.name}/>
     <Content parts={course.parts}/>
-    <Total total={total}/>
+    <Total total={total}/> //same solution for 2.3 exercises
   </div>
  )
 }
