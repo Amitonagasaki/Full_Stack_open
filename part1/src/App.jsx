@@ -38,6 +38,9 @@ const maxvotedindex = votes.indexOf(maxVote)
         <h2>Anecdote with most votes</h2>
         <p>{anecdotes[maxvotedindex]}</p>
         <p>has {maxVote} votes</p>
+        
+
+      
     </div>
   )
 }
